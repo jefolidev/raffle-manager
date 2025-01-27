@@ -1,6 +1,12 @@
+import { BrowserRouter } from 'react-router'
 import './index.css'
+import { Router } from './routes/route'
 
 export function App() {
-  return (<h1 className='text-5xl'> Hello World! </h1>)
+  return (
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
+  )
 }
 

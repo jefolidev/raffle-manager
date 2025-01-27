@@ -3,8 +3,12 @@ import { createRoot } from 'react-dom/client'
 import { App } from './app'
 import './index.css'
 
+import { Provider } from '@/components/ui/provider'
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <Provider>
+      <App />
+    </Provider>
   </StrictMode>,
 )
