@@ -1,14 +1,61 @@
 @import "tailwindcss";
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: white;
 
     width: 100%;
     height: 100vh;
-
-    font-family: "Inter", ;
+    
 }
 
-.dashboard-border {
-    border-right: 1px solid #d1d1d1;
+.sidebar {
+    padding: 1.5rem ;
+    padding-right: 0;
+
+    border-right: 1px solid #d8d8d8;
+
+    & header {
+        margin-block: .5rem;
+            & .title-sidebar {
+                font-family: "Inter", sans-serif;
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
+    }
+
+    & section {
+        user-select: none;
+        margin-top: 2rem;
+        
+        & div {
+
+            & h2 {
+                font-size: .9rem;
+                font-weight: 600;
+                letter-spacing: .8px;
+            }
+            
+            & a {       
+                font-size: 1.2rem;
+                border-radius: 1.5px;
+                padding-block: .4rem;
+                
+            }
+        }
+    }
+}
+
+.active-url {
+    border-left: 3px solid rgb(37, 42, 201);
+    margin-left: -1.3rem;
+    
+    background-color: rgba(37, 42, 201, 0.04);
+    
+    svg {
+        margin-left: 1.16rem;
+    }
 }

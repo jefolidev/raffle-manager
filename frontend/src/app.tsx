@@ -1,11 +1,15 @@
 import { BrowserRouter } from 'react-router'
-import './index.css'
+
+import { Provider } from '@/components/ui/provider'
+
 import { Router } from './routes/route'
 
 export function App() {
   return (
     <BrowserRouter>
-      <Router />
+      <Provider>
+        <Router />
+      </Provider>
     </BrowserRouter>
   )
 }
