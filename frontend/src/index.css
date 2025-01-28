@@ -1,88 +1,83 @@
 @import "tailwindcss";
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    width: 100%;
-    height: 100vh;
-    
+  width: 100%;
+  height: 100vh;
 }
 
 .sidebar {
-    padding: 1.5rem ;
-    padding-right: 0;
+  padding: 1.5rem;
+  padding-right: 0;
 
-    border-right: 1px solid #d8d8d8;
+  border-right: 1px solid #d8d8d8;
 
-    & header {
-        margin-block: .5rem;
-            & .title-sidebar {
-                font-family: "Inter", sans-serif;
-                font-size: 1.2rem;
-                font-weight: 500;
-            }
+  & header {
+    margin-block: 0.5rem;
+    & .title-sidebar {
+      font-family: "Inter", sans-serif;
+      font-size: 1.2rem;
+      font-weight: 500;
     }
+  }
 
-    & section {
-        user-select: none;
-        margin-top: 2rem;
-        
-        & div {
+  & section {
+    user-select: none;
+    margin-top: 2rem;
 
-            & h2 {
-                font-size: .9rem;
-                font-weight: 600;
-                letter-spacing: .8px;
-            }
-            
-            & a {       
-                font-size: 1.2rem;
-                border-radius: 1.5px;
-                padding-block: .4rem;
-                
-            }
-        }
+    & div {
+      & h2 {
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 0.8px;
+      }
+
+      & a {
+        font-size: 1.2rem;
+        border-radius: 1.5px;
+        padding-block: 0.4rem;
+      }
     }
+  }
 }
 
 .active-url {
-    border-left: 3px solid rgb(54, 59, 201);
-    margin-left: -1.3rem;
-        
-    background-color: rgba(37, 42, 201, 0.04);
-    
-    svg {
-        margin-left: 1.16rem;
-    }
+  border-left: 3px solid rgb(54, 59, 201);
+  margin-left: -1.3rem;
+
+  background-color: rgba(37, 42, 201, 0.04);
+
+  svg {
+    margin-left: 1.16rem;
+    fill: rgb(54, 59, 201);
+  }
 }
 
 .raffle-page {
-    width: 100%;
-    padding: 2rem; 
+  width: 100%;
+  padding: 2rem;
 
-    & h1 { 
-        font-size: 2rem;
-    }
+  & h1 {
+    font-size: 2rem;
+  }
 
-    & .raffle-container {
+  & .raffle-container {
+    & form {
+      & .input-wrapper {
+        display: flex;
+        gap: 1rem;
 
-
-        & form {
-            & .input-wrapper {
-                display: flex;
-                gap: 1rem;
-
-                & input {
-                    color: #292524
-                }
-
-            }
-
-            & button {
-                color: white;
-            }
+        & input {
+          color: #292524;
         }
+      }
+
+      & button {
+        color: white;
+      }
     }
+  }
 }
