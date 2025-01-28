@@ -67,3 +67,11 @@
     - participant_raffles_quantity - number
 
 - [] Tabela intermediária entre participantes e rifas -- t_raffle_participations
+
+- [] Os status devem ser exibidos através de icones e uma legenda logo em seguida: 
+    - Simbolo de Loading - Aceitando compras de pontos
+    - X - Fechado
+    - Setinha - Finalizado
+ 
+- [] Tabela de Rifa deverá exibir: 
+    - Nome da Rifa | Status | Data de Criação | Data final | Qtd. Part. / Max. Part. | Valor Arrecadado
