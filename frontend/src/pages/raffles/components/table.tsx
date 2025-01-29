@@ -1,5 +1,5 @@
-import { DotsThree, PencilSimple, TrashSimple } from "@phosphor-icons/react";
-import { Button, Flex, Table } from "@radix-ui/themes";
+import { DotsThreeVertical } from "@phosphor-icons/react";
+import { Flex, Popover, Table } from "@radix-ui/themes";
 import Spinner from "../assets/spinner";
 
 export function RaffleTable() {
@@ -19,26 +19,33 @@ export function RaffleTable() {
         <Table.Row>
           <Table.Cell>Ana Cristina Silva</Table.Cell>
           <Table.Cell>
-            <div className="flex gap-2">
+            <Flex gap={"2"}>
               <Spinner />
               Aberto
-            </div>
+            </Flex>
           </Table.Cell>
           <Table.Cell>25/01/2025</Table.Cell>
           <Table.Cell>25/04/2025</Table.Cell>
           <Table.Cell>25/50</Table.Cell>
           <Table.Cell>
-            <Flex gap="2">
-              <Button color="amber">
-                <PencilSimple />
-              </Button>
-              <Button color="red">
-                <TrashSimple />
-              </Button>
-              <Button>
-                <DotsThree />
-              </Button>
-            </Flex>
+            <Popover.Root>
+              <Popover.Trigger>
+                <button>
+                  <DotsThreeVertical
+                    color="#1d1d1d"
+                    width={"18"}
+                    height={"18"}
+                  />
+                </button>
+              </Popover.Trigger>
+              <Popover.Content>
+                <Flex direction={"column"} align={"start"}>
+                  <button>Ver detalhes</button>
+                  <button>Editar</button>
+                  <button>Excluir</button>
+                </Flex>
+              </Popover.Content>
+            </Popover.Root>
           </Table.Cell>
         </Table.Row>
       </Table.Body>
