@@ -3,7 +3,7 @@ import '@/index.css'
 import { Button, Input, Table } from '@chakra-ui/react'
 import { MagnifyingGlass, Plus } from '@phosphor-icons/react'
 
-export function RafflesPage() {
+export function RafflesPage() { 
     return (
         <div className="raffle-page flex flex-col h-screen gap-12">
             <h1 className='text-stone-800'>Tabela de Rifas</h1>
