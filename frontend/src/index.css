@@ -28,15 +28,15 @@ body {
     user-select: none;
     margin-top: 2rem;
 
-    & div {
-      & h2 {
-        font-size: 0.9rem;
-        font-weight: 600;
-        letter-spacing: 0.8px;
-      }
+    & h2 {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+    }
 
+    & div {
       & a {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
         border-radius: 1.5px;
         padding-block: 0.4rem;
       }
