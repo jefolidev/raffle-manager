@@ -1,5 +1,6 @@
-import { Table, ButtonGroup, Button } from "@chakra-ui/react";
-import { PencilSimple, TrashSimple, DotsThree } from "@phosphor-icons/react";
+
+import { DotsThree, PencilSimple, TrashSimple } from "@phosphor-icons/react";
+import { Button, Flex, Table } from "@radix-ui/themes";
 import Spinner from "../assets/spinner";
 
 export function RaffleTable() {
@@ -7,12 +8,12 @@ export function RaffleTable() {
     <Table.Root>
       <Table.Header>
         <Table.Row>
-          <Table.ColumnHeader>Nome</Table.ColumnHeader>
-          <Table.ColumnHeader>Status</Table.ColumnHeader>
-          <Table.ColumnHeader>Criada em</Table.ColumnHeader>
-          <Table.ColumnHeader>Termina em</Table.ColumnHeader>
-          <Table.ColumnHeader>Qtd. Participantes</Table.ColumnHeader>
-          <Table.ColumnHeader></Table.ColumnHeader>
+          <Table.ColumnHeaderCell>Nome</Table.ColumnHeaderCell>
+          <Table.ColumnHeaderCell>Status</Table.ColumnHeaderCell>
+          <Table.ColumnHeaderCell>Criada em</Table.ColumnHeaderCell>
+          <Table.ColumnHeaderCell>Termina em</Table.ColumnHeaderCell>
+          <Table.ColumnHeaderCell>Qtd. Participantes</Table.ColumnHeaderCell>
+          <Table.ColumnHeaderCell></Table.ColumnHeaderCell>
         </Table.Row>
       </Table.Header>
       <Table.Body>
@@ -28,17 +29,17 @@ export function RaffleTable() {
           <Table.Cell>25/04/2025</Table.Cell>
           <Table.Cell>25/50</Table.Cell>
           <Table.Cell>
-            <ButtonGroup>
-              <Button size={"xs"} colorPalette={"yellow"}>
+            <Flex gap="2">
+              <Button color="amber">
                 <PencilSimple />
               </Button>
-              <Button size={"xs"} colorPalette={"red"}>
+              <Button color="red">
                 <TrashSimple />
               </Button>
-              <Button size={"xs"} colorPalette={"blue"}>
+              <Button>
                 <DotsThree />
               </Button>
-            </ButtonGroup>
+            </Flex>
           </Table.Cell>
         </Table.Row>
       </Table.Body>

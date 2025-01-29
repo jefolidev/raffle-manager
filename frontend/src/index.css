@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
   box-sizing: border-box;
@@ -10,6 +12,21 @@ body {
 
   position: relative;
 }
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+/* 
+input[type="text"] {
+  border: 1px solid #303030;
+  padding: .25rem;
+    border-radius: .5rem;
+
+    &:focus {
+  border: 1px solid #b5b5b5;
+  outline: 0;
+    }
+} */
 
 .sidebar {
   padding: 1.5rem;

@@ -1,10 +1,10 @@
-import { InputGroup } from "@/components/ui/input-group";
 import "@/index.css";
+
 import {
-    MagnifyingGlass,
-    Plus,
+    MagnifyingGlass
 } from "@phosphor-icons/react";
-import { Button, Dialog } from "@radix-ui/themes";
+import { Button, TextField } from "@radix-ui/themes";
+import { CreateRaffleModal } from "./components/modal";
 import { RaffleTable } from "./components/table";
 
 export function RafflesPage() {
@@ -17,42 +17,20 @@ export function RafflesPage() {
                     <div className="flex">
                         <div className="input-wrapper grow justify-between">
                             <div className="flex gap-4">
-                                <InputGroup
-                                    endElement={<MagnifyingGlass width={18} height={18} />}
-                                >
-                                    <input
-                                        type="text"
-                                        placeholder="Procure por algum nome"
-                                        className="text-stone-800"
-                                    />
 
-                                </InputGroup>
-                                <Button variant="classic">
+                                <TextField.Root
+
+                                    type="text"
+                                    placeholder="Procure por algum nome"
+                                    className="text-stone-800"
+                                >
+                                    <TextField.Slot><MagnifyingGlass width={18} height={18} /></TextField.Slot>
+                                </TextField.Root>
+                                <Button>
                                     Pesquisar
                                 </Button>
                             </div>
-
-
-                            <Dialog.Root>
-                                <Dialog.Trigger>
-                                    <Button >
-                                        <Plus /> Criar Rifa
-                                    </Button>
-                                </Dialog.Trigger>
-
-                                <Dialog.Content>
-                                    <Dialog.Title>
-                                        <Dialog.Title> Criar nova rifa </Dialog.Title>
-                                    </Dialog.Title>
-                                    <form></form>
-                                    <Button>Save</Button>
-                                    <Dialog.Close>
-
-                                        <Button variant="outline">Cancel</Button>
-                                    </Dialog.Close>
-
-                                </Dialog.Content>
-                            </Dialog.Root>
+                            <CreateRaffleModal />
                         </div>
                     </div>
                     <RaffleTable />
