@@ -1,11 +1,10 @@
-
 import { DotsThree, PencilSimple, TrashSimple } from "@phosphor-icons/react";
 import { Button, Flex, Table } from "@radix-ui/themes";
 import Spinner from "../assets/spinner";
 
 export function RaffleTable() {
   return (
-    <Table.Root>
+    <Table.Root className="table-root">
       <Table.Header>
         <Table.Row>
           <Table.ColumnHeaderCell>Nome</Table.ColumnHeaderCell>
@@ -19,7 +18,7 @@ export function RaffleTable() {
       <Table.Body>
         <Table.Row>
           <Table.Cell>Ana Cristina Silva</Table.Cell>
-          <Table.Cell >
+          <Table.Cell>
             <div className="flex gap-2">
               <Spinner />
               Aberto
@@ -44,5 +43,5 @@ export function RaffleTable() {
         </Table.Row>
       </Table.Body>
     </Table.Root>
-  )
+  );
 }

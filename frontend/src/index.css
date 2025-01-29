@@ -16,6 +16,16 @@ body {
 button:not(:disabled) {
   cursor: pointer;
 }
+input[type="date"] {
+  border: 1px solid #00000030;
+  padding: 0.25rem;
+  border-radius: 5px;
+
+  &:focus {
+    border: 1px solid teal;
+    outline: 1px solid teal;
+  }
+}
 /* 
 input[type="text"] {
   border: 1px solid #303030;
@@ -28,6 +38,16 @@ input[type="text"] {
     }
 } */
 
+#raffle-buttons {
+  margin-top: 1rem;
+}
+
+.input-legend {
+  color: #00000080;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
 .sidebar {
   padding: 1.5rem;
   padding-right: 0;
@@ -36,6 +56,7 @@ input[type="text"] {
 
   & header {
     margin-block: 0.5rem;
+
     & .title-sidebar {
       font-family: "Inter", sans-serif;
       font-size: 1.2rem;
@@ -58,9 +79,14 @@ input[type="text"] {
         font-size: 0.9rem;
         border-radius: 1.5px;
         padding-block: 0.4rem;
+        gap: 1rem;
       }
     }
   }
+}
+
+.table-root {
+  margin-block: 1.5rem;
 }
 
 .active-url {
@@ -81,6 +107,7 @@ input[type="text"] {
 
   & h1 {
     font-size: 2rem;
+    margin-block: 2rem;
   }
 
   & .raffle-container {
@@ -98,5 +125,12 @@ input[type="text"] {
         color: white;
       }
     }
+  }
+}
+
+form {
+  label > p {
+    color: crimson;
+    display: inline-block;
   }
 }
